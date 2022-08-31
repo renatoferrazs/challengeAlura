@@ -1,8 +1,9 @@
 package br.com.alura.controle.orcamento.familiar;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
 
 class DespesaTest {
 
