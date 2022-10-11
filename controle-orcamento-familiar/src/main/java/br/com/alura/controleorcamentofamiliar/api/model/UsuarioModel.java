@@ -1,15 +1,14 @@
-package br.com.alura.controleorcamentofamiliar.model;
+package br.com.alura.controleorcamentofamiliar.api.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity(name = "usuario") //o Entity meio que mostra pro java que essa classe é uma entidade de banco de dados/ uma tabela com o nome usuario, essa é uma anotação do JPA
 public class UsuarioModel {
     
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer idUsuario;
+    @Column(nullable = false, length = 50)
     public String nome;
 
     //Construtor vazio
@@ -22,7 +21,7 @@ public class UsuarioModel {
         this.nome = nome;
     }
 
-//Geters e seters
+//Geters
     public Integer getIdUsuario() {
         return idUsuario;
     }
@@ -31,6 +30,7 @@ public class UsuarioModel {
         return nome;
     }
 
+//Seters
     public void setIdUsuario(Integer idUsuario) {
         this.idUsuario = idUsuario;
     }

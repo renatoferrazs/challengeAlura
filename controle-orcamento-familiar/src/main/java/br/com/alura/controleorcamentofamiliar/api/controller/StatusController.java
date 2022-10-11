@@ -1,4 +1,4 @@
-package br.com.alura.controleorcamentofamiliar.controller;
+package br.com.alura.controleorcamentofamiliar.api.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
